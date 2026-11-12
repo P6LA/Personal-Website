@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wachirawit’s Personal Website</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+<div id="loader" role="status" aria-label="กำลังโหลด">
+  <span class="lf" style="top:18%;animation-duration:3.2s;animation-delay:.1s;font-size:34px">🐟</span>
+  <span class="lf" style="top:36%;animation-duration:2.4s;animation-delay:.5s;font-size:52px">🐟</span>
+  <span class="lf" style="top:58%;animation-duration:3.8s;animation-delay:0s;font-size:28px">🐟</span>
+  <span class="lf" style="top:74%;animation-duration:2.8s;animation-delay:.9s;font-size:44px">🐟</span>
+  <p class="lt">Loading<span>.</span><span>.</span><span>.</span></p>
+</div>
+<div id="cursor" aria-hidden="true"></div>
+<header class="top">
+  <a class="brand" href="#home">🐟 <b id="siteTitle"></b></a>
+  <button id="burger" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#hobbies">My Hobbies</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact Me</a>
+    <button id="theme" aria-label="สลับโหมดมืด/สว่าง">🌙</button>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <canvas id="bubbles" aria-hidden="true"></canvas>
+    <div class="hero-in">
+      <div id="avatar" class="avatar"></div>
+      <h1 id="welcome"></h1>
+      <p class="name"><b id="fullName"></b> (<span id="nickname"></span>)</p>
+      <p id="typing" class="typing" aria-live="off"></p>
+      <p id="intro" class="intro"></p>
+      <div class="cta">
+        <a class="btn" href="#about">About Me</a>
+        <a class="btn" href="#hobbies">My Hobbies</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="wrap">
+    <h2>About Me</h2>
+    <div id="aboutGrid" class="grid"></div>
+  </section>
+
+  <section id="skills" class="wrap">
+    <h2>Skills</h2>
+    <div id="skillList" class="skills"></div>
+  </section>
+
+  <section id="hobbies" class="wrap">
+    <h2>My Hobbies</h2>
+    <div id="hobbyGrid" class="grid"></div>
+  </section>
+
+  <section id="projects" class="wrap">
+    <h2>Projects</h2>
+    <div id="projectGrid" class="grid projects"></div>
+  </section>
+
+  <section id="contact" class="wrap contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to contact me!</p>
+    <div id="contactBtns" class="cta"></div>
+  </section>
+</main>
+
+<footer class="foot">© <span id="year"></span> <span id="footName"></span></footer>
+<button id="toTop" aria-label="กลับขึ้นด้านบน">↑</button>
+<div id="fish" aria-hidden="true">🐟</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
